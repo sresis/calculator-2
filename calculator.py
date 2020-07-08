@@ -10,9 +10,13 @@ def main():
 		if tokens[0] == '+':
 			answer = add(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == '-'
+		elif tokens[0] == '-':
 			answer = subtract(int(tokens[1]), int(tokens[2]))
 			print(answer)
+		elif tokens[0] == '*':
+			answer = multiply(int(tokens[1]), int(tokens[2]))
+			print(answer)
+
 
 
 
