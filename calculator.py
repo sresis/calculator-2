@@ -22,6 +22,17 @@ def main():
 		elif tokens[0] == 'square':
 			answer = square(int(tokens[1]))
 			print(answer)
+		elif tokens[0] == 'cube':
+			answer = cube(int(tokens[1]))
+			print(answer)
+		elif tokens[0] == 'power':
+			answer = power(int(tokens[1]), int(tokens[2]))
+			print(answer)
+		elif tokens[0] == 'mod':
+			answer = mod(int(tokens[1]), int(tokens[2]))
+			print(answer)
+		elif tokens[0] == 'q':
+			return
 
 
 
