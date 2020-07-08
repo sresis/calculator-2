@@ -7,31 +7,32 @@ def main():
 	while True:
 		input_string = input()
 		tokens = input_string.split()
-		if tokens[0] == '+':
+		operator, nums* = tokens
+		if operator == '+':
 			answer = add(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == '-':
+		elif operator == '-':
 			answer = subtract(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == '*':
+		elif operator == '*':
 			answer = multiply(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == '/':
+		elif operator == '/':
 			answer = divide(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == 'square':
+		elif operator == 'square':
 			answer = square(int(tokens[1]))
 			print(answer)
-		elif tokens[0] == 'cube':
+		elif operator == 'cube':
 			answer = cube(int(tokens[1]))
 			print(answer)
-		elif tokens[0] == 'power':
+		elif operator == 'power':
 			answer = power(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == 'mod':
+		elif operator == 'mod':
 			answer = mod(int(tokens[1]), int(tokens[2]))
 			print(answer)
-		elif tokens[0] == 'q':
+		elif operator == 'q':
 			return
 
 
