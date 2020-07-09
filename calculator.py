@@ -12,8 +12,6 @@ def valid_input_check(nums):
 	return True
 
 def main():
-	# test
-	print(reduce(subtract, [1, 2, 3, 4]))
 	#main function to perform calculations
 	while True:
 		input_string = input()
@@ -28,32 +26,26 @@ def main():
 		# determine if nums input is not valid (is not a digit)
 		if operator in approved_operators and valid_input_check(nums):
 		# can put print function at end instead of in each if statement
-			if operator == '+':
+			if operator == 'q':
+				print('you have exit the game')
+				return
+			elif  operator == '+':
 				answer = reduce(add, modified_nums)
-				print(answer)
 			elif operator == '-':
-				answer = subtract(int(tokens[1]), int(tokens[2]))
-				print(answer)
+				answer = reduce(subtract, modified_nums)
 			elif operator == '*':
-				answer = multiply(int(tokens[1]), int(tokens[2]))
-				print(answer)
+				answer = reduce(multiply, modified_nums)
 			elif operator == '/':
-				answer = divide(int(tokens[1]), int(tokens[2]))
-				print(answer)
+				answer = reduce(divide, modified_nums)
 			elif operator == 'square':
 				answer = square(int(tokens[1]))
-				print(answer)
 			elif operator == 'cube':
 				answer = cube(int(tokens[1]))
-				print(answer)
 			elif operator == 'power':
 				answer = power(int(tokens[1]), int(tokens[2]))
-				print(answer)
 			elif operator == 'mod':
 				answer = mod(int(tokens[1]), int(tokens[2]))
-				print(answer)
-			elif operator == 'q':
-				return
+			print(answer)
 		# if operator is not valid, print failure message
 		else:
 			print('Invalid input. Please try again')
